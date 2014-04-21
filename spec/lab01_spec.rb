@@ -12,4 +12,10 @@ describe Book do
 		end
 	end
 
+	describe "#title" do
+		it "return the correct title" do
+			@book.title.should eql "Title"
+		end
+	end
+
 end
