@@ -24,4 +24,10 @@ describe Book do
 		end
 	end
 
+	describe "#category" do
+		it "retrun the correct category" do
+			@book.category.should eql :category
+		end
+	end
+
 end
