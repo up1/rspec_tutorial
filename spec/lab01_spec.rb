@@ -18,4 +18,10 @@ describe Book do
 		end
 	end
 
+	describe "#author" do
+		it "retrun the correct author" do
+			@book.author.should eql "Author"
+		end
+	end
+
 end
