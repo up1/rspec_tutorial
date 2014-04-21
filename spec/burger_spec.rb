@@ -10,17 +10,13 @@ describe Burger do
 		context  "with ketchup" do
 			let(:burger) { Burger.new(:ketchup => true) }
 			
-			it "sets the ketchup flag to true" do		
-				burger.has_ketchup_on_it?.should be_true
-			end
+			it { should have_ketchup_on_it }
 		end
 
 		context  "without ketchup" do
 			let(:burger) { Burger.new(:ketchup => false) }
 
-			it "sets the ketchup flag to false" do				
-				burger.has_ketchup_on_it?.should be_false
-			end
+			it { should_not have_ketchup_on_it }
 		end
 	end
 end
