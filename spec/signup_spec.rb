@@ -23,7 +23,7 @@ describe "Signup process" do
 			fill_in "statetext", with: "Central"
 			fill_in "zipc", with: "10400"
 			fill_in "phone", with: "668696209"
-			fill_in "usemail", with: "somkiat.p2@gmail.com"
+			fill_in "usemail", with: "somkiat.p3@gmail.com"
 			fill_in "uspswd", with: "mypassword"
 			fill_in "uspswd2", with: "mypassword"
 			find("#usxtgender",:visible=>false).find("option[value='Female']").click
@@ -31,6 +31,9 @@ describe "Signup process" do
 			check('blktrdcomm')
 			click_button('Agree and Continue')
 			page.should have_content "Somkiat Puisungngoen"
+
+			page.should have_content "Log Out"
+			page.should_not have_xpath("//ul//ui[@class='js-logout']/a")
 		end		
 	end
 
